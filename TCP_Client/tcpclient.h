@@ -16,7 +16,9 @@ public:
     QJsonObject loadDatabase();
     QString getAccountNumber(const QString& username);
     double getBalance(const QString& username);
-    void createNewUser(const QString &username, const QString &account_number, const QString &password);
+    void createNewUser(const QString &username, const QString &account_number, const QString &password, const QString &fullName, int age);
+    std::string getPasswordInput();
+
 
 
 

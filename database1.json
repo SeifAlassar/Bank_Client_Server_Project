@@ -2,7 +2,7 @@
     "accounts": [
         {
             "account_number": "10001",
-            "balance": 10000,
+            "balance": 11550,
             "password": "123456",
             "transactions": [
                 {
@@ -52,30 +52,123 @@
                 {
                     "amount": 500,
                     "date": "08-05-2024"
+                },
+                {
+                    "amount": 500,
+                    "date": "13-05-2024"
+                },
+                {
+                    "amount": 200,
+                    "date": "14-05-2024"
+                },
+                {
+                    "amount": 850,
+                    "date": "18-05-2024 07:46"
+                },
+                {
+                    "amount": 500,
+                    "date": "18-05-2024 19:55"
+                },
+                {
+                    "amount": -500,
+                    "date": "18-05-2024 hh:mm"
                 }
             ],
             "username": "seif"
         },
         {
             "account_number": "10002",
-            "balance": 8000,
+            "balance": 9000,
             "password": "654321",
             "transactions": [
                 {
                     "amount": 500,
                     "date": "08-05-2024"
+                },
+                {
+                    "amount": 1000,
+                    "date": "16-05-2024"
                 }
             ],
             "username": "ziad"
         },
         {
             "account_number": "10005",
-            "balance": 10000,
+            "balance": 10500,
             "password": "12345",
             "role": "admin",
             "transactions": [
+                {
+                    "amount": 500,
+                    "date": "18-05-2024 hh:mm"
+                }
             ],
             "username": "ali"
+        },
+        {
+            "account_number": "10009",
+            "balance": 500,
+            "password": "1234567",
+            "role": "user",
+            "transactions": [
+                {
+                    "amount": 500,
+                    "date": "14-05-2024"
+                }
+            ],
+            "username": "ahmed"
+        },
+        {
+            "account_number": "10010",
+            "age": 60,
+            "balance": 500,
+            "full_name": "ehab alassar",
+            "password": "1234567",
+            "role": "user",
+            "transactions": [
+                {
+                    "amount": 500,
+                    "date": "18-05-2024 08:08"
+                }
+            ],
+            "username": "ehab"
+        },
+        {
+            "account_number": "20001",
+            "age": 24,
+            "balance": 0,
+            "full_name": "adel adel",
+            "password": "12345",
+            "role": "user",
+            "transactions": [
+            ],
+            "username": "adel"
+        },
+        {
+            "account_number": "20002",
+            "age": 27,
+            "balance": 0,
+            "full_name": "reda ali",
+            "password": "12345",
+            "role": "user",
+            "transactions": [
+            ],
+            "username": "reda"
+        },
+        {
+            "account_number": "3000",
+            "age": 25,
+            "balance": 5555,
+            "full_name": "alaa ahmed",
+            "password": "12345",
+            "role": "user",
+            "transactions": [
+                {
+                    "amount": 5555,
+                    "date": "18-05-2024 20:27"
+                }
+            ],
+            "username": "alaa"
         }
     ]
 }

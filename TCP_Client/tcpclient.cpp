@@ -1,5 +1,6 @@
-#include "TcpClient.h"
+#include "tcpclient.h"
 #include <QDebug>
+#include <iostream>
 
 TcpClient::TcpClient(QObject *parent) : QObject(parent), tcpSocket(new QTcpSocket(this)) {}
 
@@ -11,6 +12,7 @@ void TcpClient::connectToServer(const QString &host, int port) {
         qDebug() << "Connected to server";
     }
 }
+
 
 bool TcpClient::login(const QString &username, const QString &password) {
     QJsonObject request;
@@ -27,16 +29,18 @@ QJsonObject TcpClient::sendRequest(const QJsonObject &request) {
     tcpSocket->waitForBytesWritten();
     tcpSocket->waitForReadyRead(5000);
     QJsonDocument responseDoc = QJsonDocument::fromJson(tcpSocket->readAll());
-    qDebug()<< responseDoc.object();
     return responseDoc.object();
 }
 
-void TcpClient::createNewUser(const QString &username, const QString &account_number, const QString &password) {
+void TcpClient::createNewUser(const QString &username, const QString &account_number, const QString &password, const QString &fullName, int age) {
     QJsonObject newUser;
     newUser["type"] = "create_user";
     newUser["username"] = username;
     newUser["account_number"] = account_number;
     newUser["password"] = password;
+    newUser["role"] = "user";
+    newUser["full_name"] = fullName;
+    newUser["age"] = age;
 
     QJsonObject response = sendRequest(newUser);
 

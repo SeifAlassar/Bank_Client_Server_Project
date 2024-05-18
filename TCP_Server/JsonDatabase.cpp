@@ -7,7 +7,7 @@
 #include <QDir>
 
 void JsonDatabase::Database_Init() {
-    QFile file("D:/ITIDA/TCP_Server/database1.json");
+    QFile file("database1.json");
     if (!file.exists()) {                //if not existed create new one
         QJsonObject db;
         QJsonArray accounts;
@@ -17,7 +17,7 @@ void JsonDatabase::Database_Init() {
 }
 
 void JsonDatabase::DatabaseWrite(const QJsonObject &db) {
-    QFile file("D:/ITIDA/TCP_Server/database1.json");
+    QFile file("database1.json");
     if (!file.open(QIODevice::WriteOnly)) {
         qDebug() << "Failed to open database file for writing.";
         return;
@@ -29,7 +29,7 @@ void JsonDatabase::DatabaseWrite(const QJsonObject &db) {
 }
 
 QJsonObject JsonDatabase::loadDatabase() {
-    QFile file("D:/ITIDA/TCP_Server/database1.json");
+    QFile file("database1.json");
     if (!file.open(QIODevice::ReadOnly)) {
         qWarning("Unable to open the database file.");
         return {};
